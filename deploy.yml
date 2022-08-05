@@ -2,7 +2,7 @@ envs:
   - name: production
     task: deploy:kubernetes
     # Verify that the format of ref is the semantic versioning.
-    deployable_ref: 'v.*\..*\..*'
+    deployable_ref: 'Dockerfile'
     # Check the Docker image exists.
     required_contexts:
       - "publish-image"

@@ -1,0 +1,15 @@
+envs:
+  - name: production
+    task: deploy:kubernetes
+    # Verify that the format of ref is the semantic versioning.
+    deployable_ref: 'v.*\..*\..*'
+    # Check the Docker image exists.
+    required_contexts:
+      - "publish-image"
+    # Collect the metrics
+    production_environment: true
+    # Enable review
+    review:
+      enabled: true
+      reviewers: 
+        - octocat
